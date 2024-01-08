@@ -1,0 +1,13 @@
+{
+    "ID":"mcf-ansi-highlighter",
+    "ActionKeyword":"hl",
+    "Name":"Mcfunction ANSI highlighter",
+    "Description":"highlights your minecraft command with ansi encoding to fancify them in your discord messages",
+    "Author":"bth123 and SuperAnt_",
+    "Version":"1.0.0",
+    "Language":"python",
+    "Website":"https://github.com/bth123/mcf-ansi-highlighter",
+    "IcoPath": "logo.png",
+    "ExecuteFileName":"main.py"
+  }
+  
