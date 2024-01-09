@@ -33,7 +33,6 @@ class Highlighter:
 				unique_list.append(item)
 		return unique_list
 	
-	@staticmethod
 	def highlight(function):
 		function_elements = Highlighter.general_lexer(function)
 		return Highlighter.colorizer(function, function_elements)
@@ -191,7 +190,3 @@ class Highlighter:
 		return f"{colors['macro']}${colors['bracket0']}({colors['text']}{macro[2:-1]}{colors['bracket0']})"
 
 Highlighter.Database.multiple_colors_types = {"selector_filter": Highlighter.selector_filter, "nbt": Highlighter.nbt, "macro": Highlighter.macro}
-
-def highlight_text(text):
-	highlighted_text = Highlighter.highlight(text)
-	return highlighted_text

@@ -1,19 +1,21 @@
-from flowlauncher import FlowLauncher,FlowLauncherAPI
+from flowlauncher import FlowLauncher
 import webbrowser
-import Highlighter
+from Highlighter import Highlighter
 import pyperclip
-
-
 
 class Highlight(FlowLauncher):
 
+    def copy(self, txt, *withMarkdown):
+        if withMarkdown:
+            txt = "```ansi\n" + txt + "\n```"
+        pyperclip.copy(txt)
+
+    def open_url(self, url):
+        webbrowser.open(url)
+
     def query(self, query):
-        global highlighted
-        highlighted = ''
-        highlighted_from_clip = ''
-        withMarkdown = True
         if query != '':
-            highlighted = str(Highlighter.highlight_text(query))
+            highlighted = str(Highlighter.highlight(query))
             return [
                 {
                     "Title": "Copy Highlighted text: {}".format(highlighted),
@@ -31,13 +33,13 @@ class Highlight(FlowLauncher):
                     "IcoPath": "logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
-                        "parameters": [highlighted, withMarkdown]
+                        "parameters": [highlighted, True]
                     },
                     "score": 0
                 }
         ]
         else:
-            highlighted_from_clip = str(Highlighter.highlight_text(pyperclip.paste()))
+            highlighted_from_clip = str(Highlighter.highlight(pyperclip.paste()))
             return [
                 {
                     "Title": "Highlighted text from clipboard: {}".format(highlighted_from_clip.split("\n")[0][:-1] + " ..."),
@@ -55,7 +57,7 @@ class Highlight(FlowLauncher):
                     "IcoPath": "logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
-                        "parameters": [highlighted_from_clip, withMarkdown]
+                        "parameters": [highlighted_from_clip, True]
                     },
                     "score": 0
                 }
@@ -82,11 +84,3 @@ class Highlight(FlowLauncher):
                 }
             }
         ]
-
-    def copy(self, txt, *withMarkdown):
-        if withMarkdown:
-            txt = "```ansi\n" + txt + "\n```"
-        pyperclip.copy(txt)
-
-    def open_url(self, url):
-        webbrowser.open(url)
