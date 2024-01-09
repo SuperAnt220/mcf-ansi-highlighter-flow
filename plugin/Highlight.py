@@ -20,7 +20,7 @@ class Highlight(FlowLauncher):
                 {
                     "Title": "Copy Highlighted text: {}".format(highlighted),
                     "SubTitle": "Copy the output to the clipboard",
-                    "IcoPath": "logo.png",
+                    "IcoPath": "Images/logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
                         "parameters": [highlighted]
@@ -30,7 +30,7 @@ class Highlight(FlowLauncher):
                 {
                     "Title": "Copy the output with markdown",
                     "SubTitle": "With these ```ansi ``` things",
-                    "IcoPath": "logo.png",
+                    "IcoPath": "Images/logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
                         "parameters": [highlighted, True]
@@ -44,7 +44,7 @@ class Highlight(FlowLauncher):
                 {
                     "Title": "Highlighted text from clipboard: {}".format(highlighted_from_clip.split("\n")[0][:-1] + " ..."),
                     "SubTitle": "Copy ",
-                    "IcoPath": "logo.png",
+                    "IcoPath": "Images/logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
                         "parameters": [highlighted_from_clip]
@@ -54,7 +54,7 @@ class Highlight(FlowLauncher):
                 {
                     "Title": "Copy the output from your clipboard with markdown",
                     "SubTitle": "With these ```ansi ``` things",
-                    "IcoPath": "logo.png",
+                    "IcoPath": "Images/logo.png",
                     "JsonRPCAction": {
                         "method": "copy",
                         "parameters": [highlighted_from_clip, True]
@@ -68,7 +68,7 @@ class Highlight(FlowLauncher):
             {
                 "Title": "Open highlighter web app",
                 "SubTitle": "Made by bth123",
-                "IcoPath": "logo.png",
+                "IcoPath": "Images/logo.png",
                 "JsonRPCAction": {
                     "method": "open_url",
                     "parameters": ["https://bth123.github.io/mcf-ansi-highlighter/"]
@@ -77,7 +77,7 @@ class Highlight(FlowLauncher):
             {
                 "Title": "Open highlighter github",
                 "SubTitle": "From bth123",
-                "IcoPath": "logo.png",
+                "IcoPath": "Images/logo.png",
                 "JsonRPCAction": {
                     "method": "open_url",
                     "parameters": ["https://github.com/bth123/mcf-ansi-highlighter"]
