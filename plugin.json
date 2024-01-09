@@ -7,7 +7,9 @@
     "Version":"1.0.0",
     "Language":"python",
     "Website":"https://github.com/SuperAnt220/mcf-ansi-highlighter-flow",
-    "IcoPath": "Images/logo.png",
+    "IcoPath": "https://cdn.jsdelivr.net/gh/SuperAnt220/mcf-ansi-highlighter-flow@1.0.0/Images/logo.png",
+    "UrlDownload": "https://github.com/SuperAnt220/mcf-ansi-highlighter-flow/releases/download/v1.0.0/Flow.Launcher.Plugin.McfunctionANSIHighlighter.zip",
+    "UrlSourceCode": "https://github.com/SuperAnt220/mcf-ansi-highlighter-flow/tree/main",
     "ExecuteFileName":"main.py"
   }
   
