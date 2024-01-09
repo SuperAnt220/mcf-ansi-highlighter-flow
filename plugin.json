@@ -4,7 +4,7 @@
     "Name":"Mcfunction ANSI highlighter",
     "Description":"highlights your minecraft command with ansi encoding to fancify them in your discord messages",
     "Author":"SuperAnt_",
-    "Version":"0.0.1",
+    "Version":"1.0.0",
     "Language":"python",
     "Website":"https://github.com/SuperAnt220/mcf-ansi-highlighter-flow",
     "IcoPath": "Images/logo.png",
